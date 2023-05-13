@@ -1,0 +1,19 @@
+.team-stats__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .team-stats__table th,
+    .team-stats__table td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .team-stats__table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+

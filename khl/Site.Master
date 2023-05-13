@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="khl.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - ХК Югра</title>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="Дополнительные параметры">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">хкЮгра</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Главная</a></li>
+                        <li><a runat="server" id="teamBtn" Visible="true" href="~/Team">О команде</a></li>
+                        <li><a runat="server" id="cartBtn" Visible="false" href="~/Cart">Корзина</a></li>
+                        <li><a runat="server" id="tovBtn" Visible="false" href="~/Tovars">Товары</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><a runat="server" id="admBtn" Visible="false" href="~/Admin">Администратор</a></li>
+                    <li><a runat="server" id="loginButton" Visible="true" href="~/Login">Вход</a></li>
+                    <li><a runat="server" id="registrationButton" Visible="true" href="~/Registration">Регистрация</a></li>
+                    <li><a runat="server" id="lkBtn" Visible="false" href="~/Account">Личный кабинет</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - все права защищены.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
